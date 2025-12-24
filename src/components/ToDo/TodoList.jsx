@@ -9,7 +9,7 @@ import {
 import { addEvent } from "../../features/calendar/calendarSlice";
 
 import TodoInput from "./TodoInput";
-import TodoItem from "./TodoItem";
+import TodoItem from "./ToDoItem";
 
 const TodoList = () => {
   const dispatch = useDispatch();
