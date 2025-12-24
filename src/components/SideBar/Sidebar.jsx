@@ -83,12 +83,14 @@ const SideBar = ({ onClose }) => {
               <Linkedin size={18} />
             </a>
 
-            <a
-              href="rssubham63@gmail.com"
-              className="text-gray-700 hover:text-red-600"
-            >
-              <Mail size={18} />
-            </a>
+           <button
+  onClick={() =>
+    window.open("mailto:rssubham63@gmail.com")
+  }
+  className="rounded p-2 text-gray-700 hover:bg-red-100 hover:text-red-600"
+>
+  <Mail size={18} />
+</button>     
           </div>
         </div>
 
