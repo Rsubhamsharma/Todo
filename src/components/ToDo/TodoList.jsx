@@ -56,20 +56,22 @@ const handleSaveEdit = (id) => {
 
       <ul className="mt-5 space-y-3">
         {todos.map((todo) => (
-  <TodoItem
-    key={todo.id}
-    todo={todo}
-    isEditing={editId === todo.id}
-    editValue={editValue}
-    onToggle={() => dispatch(toggleTodo(todo.id))}
-    onEditStart={() => {
-      setEditId(todo.id);
-      setEditValue(todo.title);
-    }}
-    onEditSave={() => handleSaveEdit(todo.id)}
-    onDelete={() => dispatch(deleteTodo(todo.id))}
-    onCalendar={(date) => addToCalendar(todo.title, date)}
-  />
+<TodoItem
+  key={todo.id}
+  todo={todo}
+  isEditing={editId === todo.id}
+  editValue={editValue}
+  onEditChange={setEditValue}
+  onToggle={() => dispatch(toggleTodo(todo.id))}
+  onEditStart={() => {
+    setEditId(todo.id);
+    setEditValue(todo.title);
+  }}
+  onEditSave={() => handleSaveEdit(todo.id)}
+  onDelete={() => dispatch(deleteTodo(todo.id))}
+  onCalendar={(date) => addToCalendar(todo.title, date)}
+/>
+
 ))}
 
       </ul>
